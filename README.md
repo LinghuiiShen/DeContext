@@ -1,9 +1,10 @@
 # DeContext as Defense: Safe Image Editing in Diffusion Transformers
 
-**Authors:** Linghui Shen, Mingyue Cui, [Xingyi Yang](https://adamdad.github.io/)
+Linghui Shen, Mingyue Cui, [Xingyi Yang](https://adamdad.github.io/)
 
 ## Overview
-![Uploading image.png…]()
+<img width="1427" height="560" alt="image" src="https://github.com/user-attachments/assets/6b4b6749-ddc0-433c-91cb-f81cd69b40c9" />
+
 
 ## Environment Setup
 
