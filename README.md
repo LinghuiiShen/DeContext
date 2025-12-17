@@ -3,9 +3,7 @@
 **Authors:** Linghui Shen, Mingyue Cui, [Xingyi Yang](https://adamdad.github.io/)
 
 ## Overview
-
-[Add your overview image here]
-<!-- ![Overview](path/to/your/image.png) -->
+![Uploading image.png…]()
 
 ## Environment Setup
 
