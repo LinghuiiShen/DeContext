@@ -2,9 +2,9 @@
 
 <div align="center">
 
-### Linghui Shen<sup>1</sup>, Mingyue Cui<sup>1</sup>, [Xingyi Yang](https://adamdad.github.io/)<sup>1</sup>
+### Linghui Shen, Mingyue Cui, [Xingyi Yang](https://adamdad.github.io/)
 
-<sup>1</sup>The Hong Kong Polytechnic University
+<sup></sup>The Hong Kong Polytechnic University
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/yourpaper)
 [![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://yourprojectpage.github.io)
@@ -13,18 +13,11 @@
 
 ---
 
-## 📋 TL;DR
-
-**DeContext** protects images from unauthorized manipulation by injecting targeted perturbations that disrupt multimodal attention pathways, effectively decoupling the link between input and output. 
 
 ## 🖼️ Overview
 
 <img width="1427" height="560" alt="image" src="https://github.com/user-attachments/assets/294b468b-f0e0-43a7-9902-80e90bdb15f0" />
-
-
-In-context diffusion models allow users to modify images with remarkable ease and realism. However, the same power raises serious privacy concerns: personal images can be easily manipulated for identity impersonation, misinformation, or other malicious uses, all without the owner's consent. While prior work has explored input perturbations to protect against misuse in personalized text-to-image generation, the robustness of modern, large-scale in-context DiT-based models remains largely unexamined. 
-
-In this paper, we propose **DeContext**, a new method to safeguard input images from unauthorized in-context editing. Our key insight is that contextual information from the source image propagates to the output primarily through multimodal attention layers. By injecting small, targeted perturbations that weaken these cross-attention pathways, DeContext breaks this flow, effectively decoupling the link between input and output. This simple defense is both efficient and robust. We further show that early denoising steps and specific transformer blocks dominate context propagation, which allows us to concentrate perturbations where they matter most. Experiments on *Flux Kontext* and *Step1X-Edit* show that DeContext consistently blocks unwanted image edits while preserving visual quality.
+**DeContext** protects images from unauthorized manipulation by injecting targeted perturbations that disrupt multimodal attention pathways, effectively decoupling the link between input and output. 
 
 ## 🛠️ Environment Setup
 
