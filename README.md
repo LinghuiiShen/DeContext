@@ -74,7 +74,7 @@ python ./inference/step1x_inference.py
 
 ## 🙏 Acknowledgement
 
-Our work is built upon [Hugging Face Diffusers](https://github.com/huggingface/diffusers) and [Step1X-Edit](https://huggingface.co/stepfun-ai/Step1X-Edit). Thanks for their excellent work!
+Our work is built upon [Diffusers](https://github.com/huggingface/diffusers) and [Step1X-Edit](https://huggingface.co/stepfun-ai/Step1X-Edit). Thanks for their excellent work!
 
 ## 📝 Citation
 
