@@ -17,16 +17,16 @@
 ## 🖼️ Overview
 
 <img width="1427" height="560" alt="image" src="https://github.com/user-attachments/assets/294b468b-f0e0-43a7-9902-80e90bdb15f0" />
-**DeContext** protects images from unauthorized manipulation by injecting targeted perturbations that disrupt multimodal attention pathways, effectively decoupling the link between input and output. 
+DeContext is a defense for DiT-based in-context image editing that effectively detaches the context from the input, safeguarding images against unauthorized manipulation.
+
 
 ## 🛠️ Environment Setup
 
-Navigate to the project directory:
 ```bash
 cd DeContext
 ```
 
-Create and activate conda environment:
+Create and activate conda environment (Optional):
 ```bash
 conda create -n decontext python=3.12
 conda activate decontext
@@ -62,12 +62,12 @@ Download the following models and place them in `./attack/attack_Step1X_Edit/mod
 
 > **Note:** For more details, refer to the [Step1X-Edit repository](https://github.com/stepfun-ai/Step1X-Edit).
 
-#### ⚔️ Run Attack
+#### Run Attack
 ```bash
 bash ./scripts/attack_step1x.sh
 ```
 
-#### 🔍 Run Inference
+#### Run Inference
 ```bash
 python ./inference/step1x_inference.py
 ```
