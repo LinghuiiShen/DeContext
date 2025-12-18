@@ -21,7 +21,7 @@
 </p>
 
 ## 📚 Table of Contents
-- [🔍 About](#-tldr)
+- [🔍 About](#-about)
 - [⚠️ Motivation: Privacy Risk in In-Context Image Editing](#️-motivation-privacy-risk-in-in-context-image-editing)
 - [🧠 Method Overview](#-method-overview)
 - [🚀 Quick Start](#-quick-start)
