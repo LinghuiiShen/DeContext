@@ -1,11 +1,12 @@
 torch>=2.3.1
 torchvision>=0.18.1
 liger_kernel==0.5.4
+xfuser>=0.4.5
 einops==0.8.1
-transformers==4.51.3
+transformers>=4.51.3
 qwen_vl_utils==0.0.10
 safetensors==0.4.5
 pillow==11.1.0
 gradio==5.29.0
 peft==0.17.0
-transformers==4.55.0
+matplotlib>=3.10.0

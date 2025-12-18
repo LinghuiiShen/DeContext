@@ -17,7 +17,6 @@ VERSION="v1.1"
 # Create output directory
 mkdir -p "$OUTPUT_DIR"
 
-# Run attack
 python ./attack/attack_Step1X_Edit/attack.py \
     --model_path "$MODEL_PATH" \
     --condition_images_dir "$CONDITION_IMAGES_DIR" \
