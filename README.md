@@ -20,6 +20,10 @@
   <img src="assets/compare.png" width="100%">
 </p>
 
+> **DeContext as Defense: Safe Image Editing in Diffusion Transformers**  
+> Linghui Shen, Mingyue Cui, [Xingyi Yang](https://adamdad.github.io/)  
+> The Hong Kong Polytechnic University
+
 ## 📚 Table of Contents
 - [🔍 About](#-about)
 - [⚠️ Motivation: Privacy Risk in In-Context Image Editing](#️-motivation-privacy-risk-in-in-context-image-editing)
