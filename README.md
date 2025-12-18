@@ -29,9 +29,8 @@
 - [⚠️ Motivation: Privacy Risk in In-Context Image Editing](#️-motivation-privacy-risk-in-in-context-image-editing)
 - [🧠 Method Overview](#-method-overview)
 - [🚀 Quick Start](#-quick-start)
-  - [Installation](#installation)
-  - [Run on FLUX-Kontext](#run-on-flux-kontext)
-  - [Run on Step1X-Edit](#run-on-step1x-edit)
+  - [Installation](## 🛠️ Installation)
+  - [How to run] (##
 - [📚 Citation](#-citation)
 - [🙏 Acknowledgements](#-acknowledgements)
 
@@ -105,7 +104,7 @@ pip install -r requirements.txt
 
 ### 🔥 How to Run
 
-### 1️⃣ Attack on Flux Kontext
+#### 1️⃣ Attack on Flux Kontext
 
 Run the attack script:
 ```bash
@@ -117,9 +116,9 @@ Run inference:
 python ./inference/kontext_inference.py
 ```
 
-### 2️⃣ Attack on Step1X-Edit
+#### 2️⃣ Attack on Step1X-Edit
 
-#### 📥 Download Required Models
+##### 📥 Download Required Models
 
 Download the following models and place them in `./attack/attack_Step1X_Edit/models`:
 
@@ -127,18 +126,18 @@ Download the following models and place them in `./attack/attack_Step1X_Edit/mod
 - [Step1X-Edit](https://huggingface.co/stepfun-ai/Step1X-Edit)
 
 > **Note:** For more details, refer to the [Step1X-Edit repository](https://github.com/stepfun-ai/Step1X-Edit).
-#### Install dependencies of Step1X-Edit
+##### Install dependencies of Step1X-Edit
 
 ```bash
 pip install -r attack/attack_Step1X_Edit/requirements.txt
 ```
 
-#### Run Attack
+##### Run Attack
 ```bash
 bash ./scripts/attack_step1x.sh
 ```
 
-#### Run Inference
+##### Run Inference
 ```bash
 python ./inference/step1x_inference.py
 ```
