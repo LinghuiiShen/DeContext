@@ -129,7 +129,9 @@ Download the following models and place them in `./attack/attack_Step1X_Edit/mod
 > **Note:** For more details, refer to the [Step1X-Edit repository](https://github.com/stepfun-ai/Step1X-Edit).
 #### Install dependencies of Step1X-Edit
 
+```bash
 pip install -r attack/attack_Step1X_Edit/requirements.txt
+```
 
 #### Run Attack
 ```bash
