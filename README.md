@@ -5,7 +5,6 @@
     style="
       vertical-align: middle;
       margin-right: 5px;
-      margin-top: -10px;
     "
   />
   DeContext: Safe Image Editing in Diffusion Transformers
@@ -65,7 +64,7 @@ DeContext is based on a key observation:
 
 Instead of attacking the output or retraining the model, DeContext:
 - Targets cross-attention between target and context tokens
-- restricting the optimization to early, high-noise timesteps and early-to-middle, context-heavy transformer blocks, effectively disrupting context propagation.
+- restricting the optimization to early, high-noise timesteps and early-to-middle, context-heavy transformer blocks
 - Injects subtle perturbations into the input image and effectively detaches the context
 
 
