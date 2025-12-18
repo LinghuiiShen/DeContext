@@ -1,58 +1,107 @@
-# DeContext as Defense: Safe Image Editing in Diffusion Transformers
+<h1 align="center" style="line-height: 1.15;">
+  <img 
+    src="assets/logo.png" 
+    width="50"
+    style="
+      vertical-align: middle;
+      margin-right: 5px;
+      margin-top: -6px;
+    "
+  />
+  DeContext: Safe Image Editing in Diffusion Transformers
+</h1>
 
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/yourpaper)
-[![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://linghuiishen.github.io/decontext_project_page/)
 
-</div>
+
+<p align="center">
+  <a href="https://arxiv.org/abs/xxxx.xxxxx">📄 Paper</a> •
+  <a href="https://linghuiishen.github.io/decontext_project_page/">🌐 Project Page</a> •
+  <a href="#-quick-start">🚀 Quick Start</a>
+</p>
+
+---
+<p align="center">
+  <img src="assets/compare.png" width="100%">
+</p>
+
+## 📚 Table of Contents
+- [🔍 About](#-tldr)
+- [⚠️ Motivation: Privacy Risk in In-Context Image Editing](#️-motivation-privacy-risk-in-in-context-image-editing)
+- [🧠 Method Overview](#-method-overview)
+- [🚀 Quick Start](#-quick-start)
+  - [Installation](#installation)
+  - [Run on FLUX-Kontext](#run-on-flux-kontext)
+  - [Run on Step1X-Edit](#run-on-step1x-edit)
+- [📚 Citation](#-citation)
+- [🙏 Acknowledgements](#-acknowledgements)
 
 ---
 
+## 🔍 About
+
+**DeContext** is a defense method for **DiT-based in-context image editing models**
+that protects user images from **unauthorized identity manipulation**.
+
+By injecting **imperceptible, attention-aware perturbations** into the input image,
+DeContext **weakens cross-attention pathways**, preventing identity leakage
+while preserving visual quality.
+
+---
+
+## ⚠️ Motivation: Privacy Risk in In-Context Image Editing
+
+Recent diffusion transformers (DiTs) such as **FLUX-Kontext** and **Step1X-Edit**
+enable powerful in-context image editing using a single reference image.
+While effective, this capability introduces **serious privacy risks**:
+
+- Personal images can be edited **without the owner’s consent**
+- Identity information is often **preserved and leaked**
+- Malicious edits (impersonation, misinformation, defamation) become trivial
+
 <p align="center">
-<img width="70%" alt="image" src="https://github.com/user-attachments/assets/c2fab4e0-aa82-486b-89f4-e444645d5ebe" />
+  <img src="assets/Privacy_risk.png" width="100%">
 </p>
 
-## 🖼️ Overview
-DeContext is a defense for DiT-based in-context image editing that effectively detaches the context from the input, safeguarding images against unauthorized manipulation through subtle perturbation injection.
-<img width="1427" height="560" alt="image" src="https://github.com/user-attachments/assets/294b468b-f0e0-43a7-9902-80e90bdb15f0" />
+---
+
+## 🧠 Method Overview
+
+DeContext is based on a key observation:
+
+> **In Diffusion Transformers, contextual information propagates primarily through cross-attention layers.**
+
+Instead of attacking the output or retraining the model, DeContext:
+- Targets **cross-attention between target and context tokens**
+- Injects **small, imperceptible perturbations** into the input image
+- Suppresses identity-related attention while keeping semantics intact
+
+<p align="center">
+  <img src="assets/pipeline.png" width="100%">
+</p>
+
+---
 
 
-> **DeContext as Defense: Safe Image Editing in Diffusion Transformers**  
-> Linghui Shen, Mingyue Cui, [Xingyi Yang](https://adamdad.github.io/)  
-> The Hong Kong Polytechnic University
+## 🚀 Quick Start
 
+### Installation
 
-## 🛠️ Environment Setup
-
-```bash
-cd DeContext
-```
-
-Create and activate conda environment (Optional):
 ```bash
 conda create -n decontext python=3.12
 conda activate decontext
-```
-
-Install dependencies:
-```bash
+cd DeContext
 pip install -r requirements.txt
 ```
 
-## 🚀 How to Run
 
-### 1️⃣ Attack on Flux Kontext
+### Run on FLUX-Kontext
 
-Run the attack script:
 ```bash
-bash ./scripts/attack_kontext.sh
+bash scripts/attack_kontext.sh
+python inference/kontext_inference.py
 ```
 
-Run inference:
-```bash
-python ./inference/kontext_inference.py
-```
-
-### 2️⃣ Attack on Step1X-Edit
+### Run on Step1X-Edit
 
 #### 📥 Download Required Models
 
@@ -63,28 +112,26 @@ Download the following models and place them in `./attack/attack_Step1X_Edit/mod
 
 > **Note:** For more details, refer to the [Step1X-Edit repository](https://github.com/stepfun-ai/Step1X-Edit).
 
-#### Run Attack
+#### 📥 Run
+
 ```bash
-bash ./scripts/attack_step1x.sh
+bash scripts/attack_step1x.sh
+python inference/step1x_inference.py
 ```
 
-#### Run Inference
-```bash
-python ./inference/step1x_inference.py
-```
+---
 
-## 🙏 Acknowledgement
+## 📚 Citation
 
-Our work is built upon [Diffusers](https://github.com/huggingface/diffusers) and [Step1X-Edit](https://huggingface.co/stepfun-ai/Step1X-Edit). Thanks for their excellent work!
-
-## 📝 Citation
-
-If you find this work useful, please consider citing:
 ```bibtex
-@article{decontext2024,
-  title={DeContext as Defense: Safe Image Editing in Diffusion Transformers},
-  author={Shen, Linghui and Cui, Mingyue and Yang, Xingyi},
-  journal={arXiv preprint arXiv:xxxx.xxxxx},
-  year={2024}
+@article{shen2026decontext,
+  title   = {DeContext as Defense: Safe Image Editing in Diffusion Transformers},
+  author  = {Shen, Linghui and Cui, Mingyue and Yang, Xingyi},
+  year    = {2026}
 }
 ```
+
+---
+
+## 🙏 Acknowledgements
+Our work is built upon [Diffusers](https://github.com/huggingface/diffusers) and [Step1X-Edit](https://huggingface.co/stepfun-ai/Step1X-Edit). Thanks for their excellent work!
