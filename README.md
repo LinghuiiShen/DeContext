@@ -9,9 +9,9 @@
 
 
 ## 🖼️ Overview
-
-<img width="1427" height="560" alt="image" src="https://github.com/user-attachments/assets/294b468b-f0e0-43a7-9902-80e90bdb15f0" />
 DeContext is a defense for DiT-based in-context image editing that effectively detaches the context from the input, safeguarding images against unauthorized manipulation through subtle perturbation injection.
+<img width="1427" height="560" alt="image" src="https://github.com/user-attachments/assets/294b468b-f0e0-43a7-9902-80e90bdb15f0" />
+
 
 > **DeContext as Defense: Safe Image Editing in Diffusion Transformers**  
 > Linghui Shen, Mingyue Cui, [Xingyi Yang](https://adamdad.github.io/)  
