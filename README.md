@@ -52,14 +52,10 @@ while preserving visual quality.
 
 Recent diffusion transformers (DiTs) such as **FLUX-Kontext** and **Step1X-Edit**
 enable powerful in-context image editing using a single reference image.
-While effective, this capability introduces **serious privacy risks**:
-
-- Personal images can be edited **without the owner’s consent**
-- Identity information is often **preserved and leaked**
-- Malicious edits (impersonation, misinformation, defamation) become trivial
+While effective, this capability introduces privacy risks that personal images can be edited without the owner’s consent.
 
 <p align="center">
-  <img src="assets/Privacy_risk.png" width="100%">
+  <img src="assets/Privacy_risk.png" width="70%">
 </p>
 
 ---
@@ -71,9 +67,10 @@ DeContext is based on a key observation:
 > **In Diffusion Transformers, contextual information propagates primarily through cross-attention layers.**
 
 Instead of attacking the output or retraining the model, DeContext:
-- Targets **cross-attention between target and context tokens**
-- Injects **small, imperceptible perturbations** into the input image
-- Suppresses identity-related attention while keeping semantics intact
+- Targets cross-attention between target and context tokens
+- Restricting the optimization to early, high-noise timesteps and early-to-middle, context-heavy transformer blocks
+- Injects subtle perturbations into the input image and effectively detaches the contextual information
+
 
 <p align="center">
   <img src="assets/pipeline.png" width="100%">
