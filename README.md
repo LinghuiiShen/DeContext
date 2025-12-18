@@ -1,13 +1,10 @@
-<h1 align="center" style="line-height: 1.15;">
+<h1 align="center" style="line-height: 1.15; display: flex; align-items: center; justify-content: center;">
   <img 
     src="assets/logo.png" 
     width="50"
-    style="
-      vertical-align: middle;
-      margin-right: 5px;
-    "
+    style="margin-right: 5px;"
   />
-  DeContext: Safe Image Editing in Diffusion Transformers
+  <span>DeContext: Safe Image Editing in Diffusion Transformers</span>
 </h1>
 
 
