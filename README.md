@@ -84,13 +84,15 @@ Instead of attacking the output or retraining the model, DeContext:
 
 ## 🚀 Quick Start
 
-### Installation
+### 🛠️ Installation
 
 ```bash
 cd DeContext
 ```
 
-Create and activate conda environment (Optional):
+Create and activate conda environment 
+
+(Optional):
 ```bash
 conda create -n decontext python=3.12
 conda activate decontext
@@ -101,7 +103,7 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-### 🚀 How to Run
+### 🔥 How to Run
 
 ### 1️⃣ Attack on Flux Kontext
 
