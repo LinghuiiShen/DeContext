@@ -1,5 +1,4 @@
-# DeContext as Defense:
-# Safe Image Editing in Diffusion Transformers
+# DeContext as Defense: Safe Image Editing in Diffusion Transformers
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/yourpaper)
 [![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://linghuiishen.github.io/decontext_project_page/)
