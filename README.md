@@ -1,4 +1,4 @@
-# DeContext as Defense: Safe Image Editing in Diffusion Transformers
+<img width="536" height="356" alt="0bcaaabc0432aa287005e7e801cc5262" src="https://github.com/user-attachments/assets/eb258e99-25f6-4bed-b117-2ef87543ebed" />*# DeContext as Defense: Safe Image Editing in Diffusion Transformers
 
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/abs/yourpaper)
 [![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://linghuiishen.github.io/decontext_project_page/)
@@ -8,7 +8,8 @@
 ---
 
 <p align="center">
-<img width="70%" alt="image" src="https://github.com/user-attachments/assets/2d8bbca3-33ab-48cd-98c3-b420a628da92" />
+<img width="70%" alt="image" src="https://github.com/user-attachments/assets/c2fab4e0-aa82-486b-89f4-e444645d5ebe" />
+
 </p>
 
 ## 🖼️ Overview
