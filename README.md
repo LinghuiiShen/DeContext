@@ -7,7 +7,9 @@
 
 ---
 
-<img width="843" height="601" alt="image" src="https://github.com/user-attachments/assets/8fb1504c-926e-462e-94dd-bee09f0c452f" />
+<p align="center">
+  <img width="843" height="601" alt="image" src="https://github.com/user-attachments/assets/8fb1504c-926e-462e-94dd-bee09f0c452f" />
+</p>
 
 ## 🖼️ Overview
 DeContext is a defense for DiT-based in-context image editing that effectively detaches the context from the input, safeguarding images against unauthorized manipulation through subtle perturbation injection.
