@@ -49,7 +49,7 @@ while preserving visual quality.
 
 Recent diffusion transformers (DiTs) such as FLUX-Kontext and Step1X-Edit
 enable powerful in-context image editing using a single reference image.
-While effective, this capability introduces serious privacy risks that personal images can be edited **without the owner’s consent**
+While effective, this capability introduces serious privacy risks that personal images can be edited **without the owner’s consent**.
 
 <p align="center">
   <img src="assets/Privacy_risk.png" width="60%">
