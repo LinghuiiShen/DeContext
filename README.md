@@ -87,21 +87,35 @@ Instead of attacking the output or retraining the model, DeContext:
 ### Installation
 
 ```bash
+cd DeContext
+```
+
+Create and activate conda environment (Optional):
+```bash
 conda create -n decontext python=3.12
 conda activate decontext
-cd DeContext
+```
+
+Install dependencies:
+```bash
 pip install -r requirements.txt
 ```
 
+### 🚀 How to Run
 
-### Run on FLUX-Kontext
+### 1️⃣ Attack on Flux Kontext
 
+Run the attack script:
 ```bash
-bash scripts/attack_kontext.sh
-python inference/kontext_inference.py
+bash ./scripts/attack_kontext.sh
 ```
 
-### Run on Step1X-Edit
+Run inference:
+```bash
+python ./inference/kontext_inference.py
+```
+
+### 2️⃣ Attack on Step1X-Edit
 
 #### 📥 Download Required Models
 
@@ -112,13 +126,15 @@ Download the following models and place them in `./attack/attack_Step1X_Edit/mod
 
 > **Note:** For more details, refer to the [Step1X-Edit repository](https://github.com/stepfun-ai/Step1X-Edit).
 
-#### 📥 Run
-
+#### Run Attack
 ```bash
-bash scripts/attack_step1x.sh
-python inference/step1x_inference.py
+bash ./scripts/attack_step1x.sh
 ```
 
+#### Run Inference
+```bash
+python ./inference/step1x_inference.py
+```
 ---
 
 ## 📚 Citation
