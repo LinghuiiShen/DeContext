@@ -5,7 +5,7 @@
     style="
       vertical-align: middle;
       margin-right: 5px;
-      margin-top: -6px;
+      margin-top: -10px;
     "
   />
   DeContext: Safe Image Editing in Diffusion Transformers
@@ -47,7 +47,7 @@ while preserving visual quality.
 
 ## ⚠️ Motivation: Privacy Risk in In-Context Image Editing
 
-Recent diffusion transformers (DiTs) such as FLUX-Kontext** and Step1X-Edit
+Recent diffusion transformers (DiTs) such as FLUX-Kontext and Step1X-Edit
 enable powerful in-context image editing using a single reference image.
 While effective, this capability introduces serious privacy risks that personal images can be edited **without the owner’s consent**
 
@@ -84,7 +84,7 @@ Instead of attacking the output or retraining the model, DeContext:
 cd DeContext
 ```
 
-Create and activate conda environment 
+##### Create and activate conda environment 
 
 (Optional):
 ```bash
@@ -92,7 +92,7 @@ conda create -n decontext python=3.12
 conda activate decontext
 ```
 
-Install dependencies:
+##### Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
@@ -101,12 +101,12 @@ pip install -r requirements.txt
 
 #### 1️⃣ Attack on Flux Kontext
 
-Run the attack script:
+##### Run the attack script:
 ```bash
 bash ./scripts/attack_kontext.sh
 ```
 
-Run inference:
+##### Run inference:
 ```bash
 python ./inference/kontext_inference.py
 ```
