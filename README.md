@@ -29,8 +29,6 @@
 - [⚠️ Motivation: Privacy Risk in In-Context Image Editing](#️-motivation-privacy-risk-in-in-context-image-editing)
 - [🧠 Method Overview](#-method-overview)
 - [🚀 Quick Start](#-quick-start)
-  - [Installation](#-installation)
-  - [How to run](#how-to-run)
 - [📚 Citation](#-citation)
 - [🙏 Acknowledgements](#-acknowledgements)
 
