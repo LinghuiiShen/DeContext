@@ -303,11 +303,36 @@ def main():
     
     # Load models
     logger.info("Loading Step1X models...")
-    
+
+    # directory structure:
+    # args.model_path/
+    #   ├── Step1X-Edit/
+    #   │     ├── vae.safetensors
+    #   │     ├── step1x-edit-i1258.safetensors
+    #   │     └── step1x-edit-v1p1-official.safetensors
+    #   └── Qwen2.5-VL-7B-Instruct/
+    step1x_dir = os.path.join(args.model_path, "Step1X-Edit")
+    qwen_dir = os.path.join(args.model_path, "Qwen2.5-VL-7B-Instruct")
+
+# Compatible with two placement methods:
+
+# 1) Place vae.safetensors in the Step1X-Edit/ directory
+
+# 2) Place vae.safetensors directly in the root directory of args.model_path
+    ae_path_step1x = os.path.join(step1x_dir, "vae.safetensors")
+    ae_path_root = os.path.join(args.model_path, "vae.safetensors")
+    if os.path.exists(ae_path_step1x):
+        ae_ckpt_path = ae_path_step1x
+    else:
+        ae_ckpt_path = ae_path_root
+
     ae, dit, llm_encoder = load_models(
-        dit_path=os.path.join(args.model_path, 'step1x-edit-v1p1-official.safetensors' if args.version == 'v1.1' else 'step1x-edit-i1258.safetensors'),
-        ae_path=os.path.join(args.model_path, 'vae.safetensors'),
-        qwen2vl_model_path=os.path.join(args.model_path, 'Qwen2.5-VL-7B-Instruct'),
+        dit_path=os.path.join(
+            step1x_dir,
+            "step1x-edit-v1p1-official.safetensors" if args.version == "v1.1" else "step1x-edit-i1258.safetensors",
+        ),
+        ae_path=ae_ckpt_path,
+        qwen2vl_model_path=qwen_dir,
         mode="torch",
         device=accelerator.device,
         max_length=640,

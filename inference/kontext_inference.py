@@ -14,7 +14,7 @@ import os
 def main():
     parser = argparse.ArgumentParser(description="Flux Kontext - Single Image Generation")
     parser.add_argument("--context_image", type=str, 
-                       default="perturbed/adversarial_170_step_800.png",
+                       default="perturbed/adversarial_170.png",
                     #    default="example/170.jpg",
                        help="Context image path")
     parser.add_argument("--prompt", type=str, 
@@ -55,7 +55,15 @@ def main():
     print("Model loaded successfully")
     
     # Load context image
-    context_image = load_image(args.context_image)
+    # Convert to absolute path if relative
+    context_image_path = args.context_image
+    if not os.path.isabs(context_image_path):
+        context_image_path = os.path.abspath(context_image_path)
+    
+    if not os.path.exists(context_image_path):
+        raise FileNotFoundError(f"Context image not found: {context_image_path}")
+    
+    context_image = load_image(context_image_path)
     context_image_name = Path(args.context_image).stem
     
     print(f"\nContext image: {args.context_image}")

@@ -17,8 +17,8 @@ VERSION="v1.1"
 # Create output directory
 mkdir -p "$OUTPUT_DIR"
 
-# Run attack
-python ./attack/attack_Step1X_Edit/attack.py \
+# Run attack in background
+nohup python ./attack/attack_Step1X_Edit/attack.py \
     --model_path "$MODEL_PATH" \
     --condition_images_dir "$CONDITION_IMAGES_DIR" \
     --output_dir "$OUTPUT_DIR" \
@@ -28,4 +28,10 @@ python ./attack/attack_Step1X_Edit/attack.py \
     --attack_steps "$ATTACK_STEPS" \
     --seed "$SEED" \
     --mixed_precision "$MIXED_PRECISION" \
-    --version "$VERSION"
+    --version "$VERSION" \
+    > "$OUTPUT_DIR/attack_step1x.log" 2>&1 &
+
+echo "Attack started in background. PID: $!"
+echo "Log file: $OUTPUT_DIR/attack_step1x.log"
+echo "To check progress: tail -f $OUTPUT_DIR/attack_step1x.log"
+echo "To stop: kill $!"

@@ -653,39 +653,19 @@ def main():
             del packed_input_pert, adv_condition, context_prop, noisy_latents, noise
             torch.cuda.empty_cache()
             
-            # Save intermediate results every 200 steps
-            if (step + 1) % 200 == 0:
-                with torch.no_grad():
-                    perturbed_np = perturbed_condition.detach().squeeze(0).cpu().float().numpy()
-                    perturbed_np = (perturbed_np + 1.0) * 127.5
-                    perturbed_np = np.transpose(perturbed_np, (1, 2, 0)).astype(np.uint8)
-                    perturbed_pil = Image.fromarray(perturbed_np)
-                    
-                    intermediate_path = os.path.join(args.output_dir, f"adversarial_{Path(cond_path).stem}_step_{step+1}.png")
-                    perturbed_pil.save(intermediate_path)
-                    
-                    perturbation = perturbed_condition - original_condition
-                    delta_vis = perturbation.detach().squeeze(0).cpu().float().numpy()
-                    delta_vis = (delta_vis + args.eps) / (2 * args.eps)
-                    delta_vis = (delta_vis * 255).astype(np.uint8)
-                    delta_vis = np.transpose(delta_vis, (1, 2, 0))
-                    delta_pil = Image.fromarray(delta_vis)
-                    
-                    delta_intermediate_path = os.path.join(args.output_dir, f"perturbation_{Path(cond_path).stem}_step_{step+1}.png")
-                    delta_pil.save(delta_intermediate_path)
-                    
-                    logger.info(f"Saved intermediate result at step {step+1}: {intermediate_path}")
-        
         attention_hook.clear_hooks()
         del progress_bar, guidance, latent_image_ids
         torch.cuda.empty_cache()
         
-        # # Save final results
-        # output_path = os.path.join(args.output_dir, f"adversarial_{Path(cond_path).stem}.png")
-        # perturbed_np = ((perturbed_condition.squeeze(0).cpu().float().numpy() + 1.0) * 127.5).astype(np.uint8)
-        # Image.fromarray(np.transpose(perturbed_np, (1, 2, 0))).save(output_path)
+        # Save final results
+        with torch.no_grad():
+            output_path = os.path.join(args.output_dir, f"adversarial_{Path(cond_path).stem}.png")
+            perturbed_np = perturbed_condition.detach().squeeze(0).cpu().float().numpy()
+            perturbed_np = (perturbed_np + 1.0) * 127.5
+            perturbed_np = np.transpose(perturbed_np, (1, 2, 0)).astype(np.uint8)
+            Image.fromarray(perturbed_np).save(output_path)
         
-        # logger.info(f"Saved: {output_path}")
+            logger.info(f"Saved final result: {output_path}")
     
     logger.info("Attack completed!")
 
