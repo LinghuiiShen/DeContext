@@ -10,7 +10,7 @@
 
 
 <p align="center">
-  <a href="https://arxiv.org/abs/xxxx.xxxxx">📄 Paper</a> •
+  <a href="https://arxiv.org/abs/2512.16625">📄 Paper</a> •
   <a href="https://linghuiishen.github.io/decontext_project_page/">🌐 Project Page</a> •
   <a href="#-quick-start">🚀 Quick Start</a>
 </p>
