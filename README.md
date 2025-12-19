@@ -141,10 +141,14 @@ python ./inference/step1x_inference.py
 ## 📚 Citation
 
 ```bibtex
-@article{shen2026decontext,
-  title   = {DeContext as Defense: Safe Image Editing in Diffusion Transformers},
-  author  = {Shen, Linghui and Cui, Mingyue and Yang, Xingyi},
-  year    = {2026}
+@misc{shen2025decontextdefensesafeimage,
+      title={DeContext as Defense: Safe Image Editing in Diffusion Transformers}, 
+      author={Linghui Shen and Mingyue Cui and Xingyi Yang},
+      year={2025},
+      eprint={2512.16625},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2512.16625}, 
 }
 ```
 
